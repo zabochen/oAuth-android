@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">oAuth-android</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">621340755431192</string>
+    <string name="fb_login_protocol_scheme">fb621340755431192</string>
+
 </resources>

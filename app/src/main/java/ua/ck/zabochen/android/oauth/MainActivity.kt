@@ -13,6 +13,9 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import kotlinx.android.synthetic.main.activity_main.*
 
+// Google SignIn
+// https://developers.google.com/identity/sign-in/android/start-integrating
+
 class MainActivity : AppCompatActivity() {
 
     private val googleSignInRequestCode = 1
@@ -45,6 +48,11 @@ class MainActivity : AppCompatActivity() {
         // SignOut
         btnGoogleSignOut.setOnClickListener {
             startSignOutFlow()
+        }
+
+        // Open Facebook Login Screen
+        btnOpenFacebookLoginScreen.setOnClickListener {
+            navigateToFacebookLoginScreen()
         }
     }
 
@@ -97,5 +105,10 @@ class MainActivity : AppCompatActivity() {
         } catch (e: Exception) {
             Log.i("MainActivity", "handleSignInResult: Exception")
         }
+    }
+
+    private fun navigateToFacebookLoginScreen() {
+        startActivity(Intent(this, FacebookAuthActivity::class.java))
+        finish()
     }
 }

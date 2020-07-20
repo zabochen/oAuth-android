@@ -6,35 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Google SignIn -->
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btnGoogleSignIn"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btnFacebookSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Google SignOut -->
     <Button
         android:id="@+id/btnGoogleSignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Google Sign Out"
+        android:text="Facebook SignOut"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoogleSignIn" />
-
-    <Button
-        android:id="@+id/btnOpenFacebookLoginScreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Open Facebook Login Screen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoogleSignOut" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFacebookSignIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
